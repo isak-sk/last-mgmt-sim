@@ -1,6 +1,3 @@
-
-
-
 class House:
     def __init__(self):
         self.total_demand = 0
@@ -19,7 +16,5 @@ class House:
         self.from_pv += pv_used
         self.from_grid += grid_used
 
-        print(f"Demand: {demand} Von PV: {pv_used}, Von Netz {grid_used} überschuss {leftover_pv}")
-
         # leftover
-        return leftover_pv
+        return leftover_pv, pv_used, grid_used
