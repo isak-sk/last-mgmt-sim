@@ -10,8 +10,14 @@ class LWK:
         self.unmet = 0
 
     def lkw_demand(self, hour):
-        if 17 <= hour <= 22:
+        if 16 <= hour <= 18:
+            return 200.0
+        elif 18 <= hour <= 20:
             return 300.0
+        elif 20 <= hour <= 22:
+            return 350.0
+        elif 22 <= hour <= 5:
+            return 400.0
         else:
             return 0.0
 
